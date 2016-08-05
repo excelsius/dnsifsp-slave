@@ -1,0 +1,14 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+zone "218.133.200.in-addr.arpa" {
+        type slave;
+        file "218.133.200.in-addr.arpa";
+        masters { 10.0.0.1; 10.0.0.32; 200.133.218.172; };
+        allow-notify { 10.0.0.1; 10.0.0.32; 200.133.218.172; };
+};
